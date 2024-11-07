@@ -101,7 +101,6 @@ const typeChart = {
     water: { fire: 0.5, ice: 0.5, steel: 0.5, water: 0.5, electric: 2, grass: 2 },
   };
   
-
   function calculateMultipliers() {
     const urlParams = new URLSearchParams(window.location.search);
     const type1FromQuery = urlParams.get("type1");
@@ -111,7 +110,6 @@ const typeChart = {
     const type1 = type1FromQuery || type1Dropdown.value.toLowerCase();
     const type2 = type2FromQuery || type2Dropdown.value.toLowerCase();
   
-    // Set selected values in dropdowns
     type1Dropdown.value = type1;
     type2Dropdown.value = type2;
   
@@ -179,7 +177,6 @@ const typeChart = {
     calculateMultipliers();
   });
   
-  // Trigger button click on space or enter key
   document.addEventListener("keydown", (event) => {
     if (event.key === " " || event.key === "Enter") {
       event.preventDefault();
