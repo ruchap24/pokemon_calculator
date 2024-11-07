@@ -115,7 +115,6 @@ const typeChart = {
     type1Dropdown.value = type1;
     type2Dropdown.value = type2;
   
-    // Update query string
     updateQueryString();
   
     const multipliers = calculateCombinedMultipliers(type1, type2);
