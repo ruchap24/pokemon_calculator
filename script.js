@@ -175,8 +175,7 @@ const typeChart = {
       `${window.location.pathname}?${urlParams}`
     );
   }
-  
-  // Calculate multipliers on page load if types are provided in the query string
+
   document.addEventListener("DOMContentLoaded", () => {
     calculateMultipliers();
   });
