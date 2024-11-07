@@ -101,6 +101,7 @@ const typeChart = {
     water: { fire: 0.5, ice: 0.5, steel: 0.5, water: 0.5, electric: 2, grass: 2 },
   };
   
+
   function calculateMultipliers() {
     const urlParams = new URLSearchParams(window.location.search);
     const type1FromQuery = urlParams.get("type1");
@@ -124,7 +125,6 @@ const typeChart = {
     while (multiplierList.firstChild)
       multiplierList.removeChild(multiplierList.firstChild);
   
-    // Sort multipliers in decreasing order of effectiveness
     const sortedMultipliers = Object.entries(multipliers)
       .sort(([, a], [, b]) => b - a)
       .reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {});
